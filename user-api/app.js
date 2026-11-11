@@ -3,6 +3,7 @@ import express from 'express';
 import { verifyDatabaseConnection } from './db.js';
 import { notFound, errorHandler } from './middlewares/errorHandler.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 5000;
@@ -16,6 +17,7 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/api', authRoutes);
+app.use('/api/users', userRoutes);
 
 // These must come after all routes: notFound catches anything unmatched,
 // errorHandler catches anything thrown.
