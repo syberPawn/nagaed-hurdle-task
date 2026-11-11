@@ -1,0 +1,19 @@
+# Secrets — every service keeps real values in a local .env (never committed).
+# The .env.example templates ARE committed.
+.env
+
+# Dependencies (reinstalled with npm install / npm ci)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Task brief from the employer — not part of the codebase
+Software Developer.pdf
