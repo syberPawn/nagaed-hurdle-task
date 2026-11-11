@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import { verifyDatabaseConnection } from './db.js';
 import { notFound, errorHandler } from './middlewares/errorHandler.js';
+import authRoutes from './routes/authRoutes.js';
 
 const app = express();
 const PORT = Number(process.env.PORT) || 5000;
@@ -13,6 +14,8 @@ app.use(express.json());
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
+
+app.use('/api', authRoutes);
 
 // These must come after all routes: notFound catches anything unmatched,
 // errorHandler catches anything thrown.
