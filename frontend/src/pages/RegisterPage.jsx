@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import * as authApi from '../api/authApi.js';
 import FormField from '../components/FormField.jsx';
+import UsernameSuggestions from '../components/UsernameSuggestions.jsx';
 
 const EMPTY_FORM = { username: '', email: '', password: '', address: '' };
 
@@ -14,6 +15,10 @@ export default function RegisterPage() {
   function handleChange(event) {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
+  }
+
+  function handleSuggestionSelect(username) {
+    setForm((current) => ({ ...current, username }));
   }
 
   async function handleSubmit(event) {
@@ -56,6 +61,7 @@ export default function RegisterPage() {
           minLength={3}
           maxLength={50}
         />
+        <UsernameSuggestions currentUsername={form.username} onSelect={handleSuggestionSelect} />
         <FormField
           label="Email"
           name="email"

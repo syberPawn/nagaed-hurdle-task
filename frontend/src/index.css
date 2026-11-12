@@ -135,6 +135,98 @@ button:disabled {
   font-size: 0.9rem;
 }
 
+/* ---------- Username suggestions ---------- */
+
+.suggestions {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem 1rem;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+}
+
+.suggestions legend {
+  padding: 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.suggestions .button-secondary {
+  width: 100%;
+}
+
+.suggestions .alert {
+  margin: 0.75rem 0 0;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  width: auto;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.chip:hover:not(:disabled) {
+  background: var(--color-info-bg);
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.chip[aria-pressed='true']:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+}
+
+.chip-suggestion {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.add-interest {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.add-interest input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font: inherit;
+}
+
+.add-interest input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  border-color: var(--color-primary);
+}
+
+.add-interest .button-secondary {
+  width: auto;
+}
+
+.hint {
+  margin: 0.75rem 0 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
 /* ---------- Messages ---------- */
 
 .alert {

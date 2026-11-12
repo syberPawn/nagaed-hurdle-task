@@ -10,9 +10,11 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
-      // In development, forward /api requests to the user-api so the browser
+      // In development, forward /api requests to the backend services so the browser
       // only talks to one origin (no CORS). In Docker, Nginx does the same job.
+      // The first matching prefix wins, so the more specific AI route comes first.
       proxy: {
+        '/api/suggest-username': env.AI_PROXY_TARGET || 'http://localhost:8000',
         '/api': env.API_PROXY_TARGET || 'http://localhost:5000',
       },
     },

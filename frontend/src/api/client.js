@@ -1,5 +1,5 @@
-// Shared HTTP client for the user-api. All requests go to /api/..., which the
-// Vite dev server (and Nginx in Docker) forwards to the backend.
+// Shared HTTP client for the backend services. All requests go to /api/..., which
+// the Vite dev server (and Nginx in Docker) forwards to user-api or ai-service.
 
 // Error thrown for any failed request. `message` is safe to show to the user;
 // `details` holds per-field validation messages, e.g. { email: 'Email is invalid' }.
