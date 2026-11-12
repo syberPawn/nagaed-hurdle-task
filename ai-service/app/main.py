@@ -22,7 +22,8 @@ app = FastAPI(
 app.include_router(suggestions.router)
 
 
-@app.get("/health", tags=["Health"], summary="Check that the service is running")
+# Used by the Docker health check; hidden from /docs, which documents the public API only.
+@app.get("/health", include_in_schema=False)
 async def health() -> dict[str, str]:
     return {"status": "ok"}
 
