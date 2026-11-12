@@ -1,8 +1,10 @@
 # NagaEd Hurdle Task — User Registration & Authentication
 
 **Sangamlung Gangmei**
-Email: s.gangmei170203@gmail.com · Phone: `ADD_PHONE` · LinkedIn: `ADD_LINKEDIN_URL`
-Repository: `ADD_GITHUB_REPO_URL`
+
+Email: ssangamlung@gmail.com · Phone: 8974888433 · LinkedIn: https://www.linkedin.com/in/sangamlung
+
+Repository: https://github.com/syberPawn/nagaed-hurdle-task
 
 A full-stack app where users register, log in and see their profile on a dashboard. While registering, users can pick a few interests and get three AI-generated username suggestions. The whole system starts with one command: `docker compose up`.
 
@@ -18,7 +20,7 @@ A full-stack app where users register, log in and see their profile on a dashboa
 ## Project structure
 
 ```
-NagaEd/
+nagaed-hurdle-task/
 ├── docker-compose.yml        # Runs all four services
 ├── .env.example              # Settings template for docker compose
 ├── architecture.png          # Architecture diagram
@@ -49,7 +51,7 @@ NagaEd/
         └── config.py         # Reads settings from the environment
 ```
 
-Each service folder also has its own `Dockerfile`, `.dockerignore` and `README.md`. `user-api` and `ai-service` also have a `.env.example` for running without Docker. Task 4 is `docker-compose.yml` plus the three Dockerfiles.
+Each service folder also has its own `Dockerfile`, `.dockerignore` and `README.md`. `user-api` and `ai-service` also have a `.env.example` for running without Docker. 
 
 ## Run with Docker
 
@@ -61,8 +63,8 @@ Each service folder also has its own `Dockerfile`, `.dockerignore` and `README.m
 ### 1. Get the code
 
 ```bash
-git clone ADD_GITHUB_REPO_URL NagaEd
-cd NagaEd
+git clone https://github.com/syberPawn/nagaed-hurdle-task.git
+cd nagaed-hurdle-task
 ```
 
 ### 2. Create the `.env` file
