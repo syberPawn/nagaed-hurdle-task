@@ -1,0 +1,17 @@
+# Keep the build context small and secrets out of the image.
+
+# Local virtual environment — packages are installed inside the image
+.venv
+
+# Python bytecode cache, in any folder
+**/__pycache__
+**/*.pyc
+
+# Secrets — passed in at runtime by Docker Compose, never baked into the image
+.env*
+
+# Not needed at runtime
+README.md
+Dockerfile
+.dockerignore
+.git
