@@ -33,11 +33,12 @@ def _optional(name: str) -> str | None:
 
 
 def load_settings() -> Settings:
+    api_key = _require("GROQ_API_KEY")
     model = _require("GROQ_MODEL")
     fallback = _optional("GROQ_FALLBACK_MODEL")
 
     return Settings(
-        groq_api_key=_require("GROQ_API_KEY"),
+        groq_api_key=api_key,
         groq_model=model,
         # A fallback identical to the main model would just repeat the same call.
         groq_fallback_model=fallback if fallback != model else None,
