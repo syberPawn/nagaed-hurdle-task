@@ -1,0 +1,19 @@
+# Keep the build context small and secrets out of the image.
+
+# Dependencies are installed inside the image with npm ci
+node_modules
+
+# Build output is produced inside the image
+dist
+
+# Local settings for the Vite dev server — not used in the Docker build
+.env*
+
+# Not needed for the build
+*.log
+npm-debug.log*
+README.md
+Dockerfile
+.dockerignore
+.gitignore
+.git
