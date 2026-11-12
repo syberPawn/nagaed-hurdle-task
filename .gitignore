@@ -2,8 +2,13 @@
 # The .env.example templates ARE committed.
 .env
 
-# Dependencies (reinstalled with npm install / npm ci)
+# Dependencies (reinstalled with npm install / pip install -r requirements.txt)
 node_modules/
+.venv/
+
+# Python bytecode cache
+__pycache__/
+*.pyc
 
 # Logs
 *.log
