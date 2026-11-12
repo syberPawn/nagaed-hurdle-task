@@ -1,0 +1,19 @@
+# Keep the build context small and secrets out of the image.
+
+# Dependencies are installed inside the image with npm ci
+node_modules
+
+# Secrets — passed in at runtime by Docker Compose, never baked into the image
+.env*
+
+# Used by the mysql container, not by the API
+sql
+
+# Not needed at runtime
+*.log
+npm-debug.log*
+README.md
+Dockerfile
+.dockerignore
+.gitignore
+.git
